@@ -1,2 +1,2 @@
-# vimarsh6739.github.io
+# Vimarsh Sathia
 My personal website
