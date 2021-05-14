@@ -1,10 +1,11 @@
 # Setup
 title:               Vimarsh Sathia
 tagline:             CS and Stats enthusiast
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:         Vimarsh Sathia
 url:                 https://vimarsh.me
 baseurl:             ''
-paginate:            5
+paginate:            15
+paginate_path:       blog/page:num
 permalink:           pretty
 
 # About/contact
@@ -18,5 +19,5 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
+version:             1.0.0
 google_analytics_id: #UA-XXXX-Y

@@ -1,0 +1,153 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper, left=0.40in, right=0.40in, top=0.25in, bottom=0.15in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+\usepackage{resume}
+
+\begin{document}
+	
+\begin{center}
+	\textbf{\LARGE Vimarsh Sathia}\\[0.5ex]
+	\textscale{1.05}{$1202$ Chelsea, Hiranandani Estate, Thane $400607$\\
+		\Letter\hspace{0.1ex} \href{mailto:vimarsh.sathia@gmail.com}{vimarsh.sathia@gmail.com}
+		\hfill
+		\Mobilefone\hspace{0.1ex} +91 98194-33877}
+\end{center}
+
+\spacedhrule{-1.0ex}{-0.5ex}
+\roottitle{EDUCATION}
+
+	\headedsection
+	{Indian Institute of Technology, Madras}
+	{Chennai, India}
+	{Bachelors of Technology in Computer Science}
+	{\period{July}{2017}{June}{2021(expected)}}
+	{GPA : $9.1$/$10$ (after $6$ semesters)}
+
+\spacedhrule{0.8ex}{0.0ex}
+\roottitle{ACHIEVEMENTS}
+
+\begin{circlist}
+	\item Awarded the first place at JARVIS - the Data Analytics hackathon event at \href{https://en.wikipedia.org/wiki/Shaastra}{Shaastra 2020}, an All India tech fest organized by IIT Madras
+	\item Awarded a branch change from Engineering Physics to Computer Science on the basis of GPA at the end of Semester $1$
+	\item Secured an All India Rank of $1806$ among half a million candidates in \href{https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced}{JEE} $2017$.
+\end{circlist}
+
+\spacedhrule{0.8ex}{0.0ex}
+\roottitle{WORK EXPERIENCE}
+	
+\headedsection
+{\href{https://www.microsoft.com/en-in/}{Microsoft}}
+{Hyderabad, India}
+{Software Engineering Internship}
+{\period{May}{2020}{July}{2020}}
+{
+	\vspace{-2.4ex}
+	\begin{circlist}
+		\item Designed an API for bulk reading of contacts in a database, with support for asynchronous scheduling and execution based on the availability of server resources.
+		\item Tested and delivered a succesful end to end implementation of the same in C\#
+		\item Performed further optimizations on the API to reduce the intermediate metadata size used from $400$ MB to $20$ MB.
+	\end{circlist}
+}
+
+\headedsection
+{\href{https://actifydatalabs.com/}{Actify Data Labs}}
+{Bangalore, India}
+{Analytics Intern}
+{\period{June}{2019}{July}{2019}}
+{
+	\vspace{-2.4ex}
+	\begin{circlist}
+		\item Worked on generating synthetic data from vector training datasets
+		\item Implemented the above in Java by building empirical copula models and drawing output points from them.
+	\end{circlist}
+}
+
+\headedsection
+{\href{https://www.dxc.technology/}{DXC Technology}}
+{Bangalore, India}
+{Intern}
+{\period{June}{2018}{July}{2018}}
+{
+	\vspace{-2.4ex}
+	\begin{circlist}
+		\item Implemented standard quantum computing algorithms like Grover's Search and Shor's Prime Factoring using the Q\# language. Featured in company tech blog posts \href{https://blogs.dxc.technology/2018/07/30/what-i-learned-quantum-computing-experiment/}{here} and \href{https://blogs.dxc.technology/2018/08/08/my-experience-as-a-dxc-labs-intern/}{here}. 
+	\end{circlist}
+}
+
+\spacedhrule{0.8ex}{0.0ex}
+\roottitle{PROJECTS}
+	
+	\headedsectionthree
+	{Conway's Game of Life}
+	{\period{Jan}{2020}{May}{2020}}
+	{CS6023: GPU Programming}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Course project on a parallel implementation and visualization of cellular automation using GPUs.
+			\item Implemented parallel computation using the Nvidia CUDA library, and rendered the results using texture mapping in OpenGL. 
+		\end{circlist}
+	}
+
+	\headedsectionthree
+	{Hidden Markov Models for Spoken Digit and Handwritten Character Classification}
+	{\period{Jul}{2019}{Nov}{2019}}
+	{CS5691: Pattern Recognition and Machine Learning}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Modelled spoken digits and handwritten Telugu characters using left to right HMM sequences trained using the Baum-Welch algorithm for classification
+			\item Achieved multi-digit and multi-character classification by concatenating individually trained HMM sequences.
+		\end{circlist}
+	}
+	
+	\headedsectionthree
+	{MiniJava Compiler}
+	{\period{Jul}{2019}{Nov}{2019}}
+	{CS3300: Compilers}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Course assignment on writing a $6$ pass compiler for minijava (a subset of the java language) and converting the code to MIPS assembly.
+			\item Implemented using \href{https://javacc.github.io/javacc/}{JavaCC} as the parser generator, with \href{http://compilers.cs.ucla.edu/jtb/}{JTB} as a syntax tree builder for all intermediate passes.
+		\end{circlist}
+	}
+
+	\headedsectionthree
+	{Prolog interpreter in OCaml}
+	{\period{Jul}{2019}{Nov}{2019}}
+	{CS3100: Paradigms of Programming}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Final course assignment to implement a Prolog interpreter in OCaml with support for backtracking(recover from bad choices) and choice points(produce multiple results).
+		\end{circlist}
+	}
+
+	% \headedsectionthree
+	% {HTTP Proxy Server}
+	% {\period{Jan}{2020}{May}{2020}}
+	% {CS3205: Computer Networks}
+	% {\vspace{-2.4ex}
+	% 	\begin{circlist}
+	% 		\item Implemented a http proxy server in C, with support for concurrent and split http GET requests using the HTTP/1.0 specification
+	% 	\end{circlist}
+	% }
+
+\spacedhrule{0.8ex}{0.0ex}
+\roottitle{RELEVANT COURSEWORK \& SKILLS}
+
+	\begin{indentsection}
+		\skill{Machine Learning}{Pattern Recognition and Machine Learning, Numerical Optimization, Applied Statistics, Deep Learning}
+		\skill{Systems}{Operating Systems, Computer Networks, GPU Programming, Blockchain and Distributed Ledger Tech}
+		\skill{PL}{Compilers, Paradigms of Programming(Functional Programming)}
+		\skill{Algorithms}{Design and Analysis of Algorithms, Topics in Algorithm Design, Pseudorandomness}
+	\end{indentsection}
+
+\spacedhrule{0.8ex}{0.0ex}
+\roottitle{EXTRA-CURRICULARS}
+	\begin{indentsection}
+		\skill{Squash}{Member of the institute squash team at IIT Madras }
+		\skill{Comedy}{Member of the Comedy Club at IIT Madras, participating and organizing open mics and improv meetups}
+	\end{indentsection}
+
+\end{document}

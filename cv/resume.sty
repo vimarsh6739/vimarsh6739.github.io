@@ -1,0 +1,211 @@
+\usepackage{footmisc,marvosym}
+
+% Setup the hyperrefs with the right color.
+\usepackage{url,hyperref,xcolor}
+\definecolor{BerkeleyBlue}{HTML}{003262}
+\hypersetup{colorlinks, linkcolor={BerkeleyBlue}, citecolor={BerkeleyBlue}, urlcolor={BerkeleyBlue}}
+
+
+%%% LOAD AND SETUP PACKAGES
+
+% To finetune lists with a inline heading and indented content.
+% See the Experiences section in the example.
+\usepackage{enumitem}
+
+% For multiple column text.
+\usepackage{multicol}
+
+% For \textscale, which I prefer over \sc (small caps).
+% See the \acr command definition below.
+\usepackage{relsize}
+
+% XeTeX specific stuff with fall-back.
+\usepackage{ifxetex}
+\ifxetex
+
+\usepackage{fontspec}
+
+% the main font, with all features on
+\setmainfont
+[ ExternalLocation ,
+Mapping          = tex-text ,
+Numbers          = OldStyle ,
+Ligatures        = {Common,Contextual} ,
+BoldFont         = texgyrepagella-bold.otf ,
+ItalicFont       = texgyrepagella-italic.otf ,
+BoldItalicFont   = texgyrepagella-bolditalic.otf ]
+{texgyrepagella-regular.otf}
+
+% same like the main font, but without old-style nums
+\newfontfamily\newnums
+[ ExternalLocation ,
+Mapping          = tex-text ,
+Ligatures        = {Common,Contextual} ,
+BoldFont         = texgyrepagella-bold.otf ,
+ItalicFont       = texgyrepagella-italic.otf ,
+BoldItalicFont   = texgyrepagella-bolditalic.otf ]
+{texgyrepagella-regular.otf}
+% Comment out the previous statement and uncomment the following line to use the
+% Linux Libertine font (it has nice lignatures).
+% Make sure to have the `ttf-linux-libertine` package installed on Ubuntu.
+%  \setmainfont[Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Contextual}]{Linux Libertine O}
+
+% needs an experimental and impossible to find package for xetex
+\usepackage[protrusion]{microtype}
+
+\else
+
+% this case we likely use the `pdftex` back-end
+% therefor we lack:
+%  * lower case numbers,
+%  * ligatures and
+%  * some typographic niceties
+% We do make use of the possibility to use `microtype`
+\usepackage{tgpagella}
+\usepackage[expansion,protrusion]{microtype}
+
+\fi
+
+
+%%% DOCUMENT WIDE STYLING
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+
+%%% CUSTOM COMMANDS
+
+% main title (name) with subtitle (date)
+\newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
+
+% title for the root sections (experience, education, etc) of the resume
+\newcommand*\roottitle[1]{\vspace{-1ex}\subsection*{#1}\vspace{-0.5ex}\nopagebreak[4]}
+
+% it seems not to work when simply using \parindent...
+\newlength{\newparindent}
+\addtolength{\newparindent}{\parindent}
+
+% a double \parindent...
+\newlength{\doubleparindent}
+\addtolength{\doubleparindent}{2\parindent}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}%
+{\begin{list}{}%
+	{	
+		\setlength{\leftmargin}{0pt}
+		\setlength{\parsep}{0pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\itemsep}{0pt}
+		\setlength{\topsep}{0pt}}
+	}
+{\end{list}}
+
+\newenvironment{circlist}%
+{\begin{list}{$\circ$}%
+		{	
+			\setlength{\leftmargin}{\newparindent}
+			\setlength{\parsep}{0pt}
+			\setlength{\parskip}{0pt}
+			\setlength{\itemsep}{0pt}
+			\setlength{\topsep}{0pt}}
+	}
+	{\end{list}}
+
+\newcommand{\period}[4]{#1.\ #2 -- #3.\ #4}
+
+% headerrow command, used for a new employer
+\newcommand{\headedsection}[5]
+{\nopagebreak[4]
+	\begin{indentsection}
+		\item[]\textscale{1.10}{\textbf{#1}}, \textsl{#2}\\
+		\textsl{#3}\hfill\textsl{#4}\\
+		{#5}
+	\end{indentsection}
+\nopagebreak[4]}
+
+\newcommand{\headedsubsection}[3]
+{\nopagebreak[4]
+	\begin{indentsection}
+		\item[]\textscale{1.10}{\textsl{#1}}\hfill\textsl{#2}\\
+		{#3}
+	\end{indentsection}
+	\nopagebreak[4]}
+
+\newcommand{\headedsectiontwo}[4]
+{\nopagebreak[4]
+	\begin{indentsection}
+		\item[]\textscale{1.063}{\textbf{#1}}\\
+		\textsl{Guide:\ #3\hfill\textsl{#2}}\\
+		{#4}
+	\end{indentsection}
+	\nopagebreak[4]}
+
+\newcommand{\headedsectionfive}[5]
+{\nopagebreak[5]
+	\begin{indentsection}
+		\item[]\textscale{1.063}{\textbf{#1}}\\
+		\textsl{#3:\ #4\hfill\textsl{#2}}\\
+		{#5}
+	\end{indentsection}
+	\nopagebreak[5]}
+
+\newcommand{\headedsectionfour}[5]
+{\nopagebreak[5]
+	\begin{indentsection}
+		\item[]\textscale{1.063}{\textbf{#1}},  \textsl{#2}\\
+		\textsl{Topic:\ #4\hfill\textsl{#3}}\\
+		{#5}
+	\end{indentsection}
+	\nopagebreak[5]}
+
+\newcommand{\headedsectionsix}[5]
+{\nopagebreak[4]
+	\begin{indentsection}
+		\item[]\textscale{1.10}{\textsl{#3} | \textbf{#1}}, \textsl{#2}
+		\hfill\textsl{#4}\\
+		{#5}
+	\end{indentsection}
+\nopagebreak[4]}
+
+
+% \newcommand{\headedsection}[5]
+% {\nopagebreak[4]
+% 	\begin{indentsection}
+% 		\item[]\textscale{1.063}{\textbf{#1}}, \textsl{#2}\\
+% 		\textsl{#3}\hfill\textsl{#4}\\
+% 		{#5}
+% 	\end{indentsection}
+% \nopagebreak[4]}
+
+
+\newcommand{\headedsectionthree}[4]
+{\nopagebreak[4]
+	\begin{indentsection}
+		\item[]\textscale{1.063}{\textbf{#1}}\\
+		\textsl{\ #3\hfill\textsl{#2}}\\
+		{#4}
+	\end{indentsection}
+	\nopagebreak[4]}
+	
+\newcommand{\skill}[2]
+{\item[] \textbf{#1}{:} #2}
+
+
+
+
+\newcommand{\award}[4]
+{\nopagebreak[4]
+	\begin{indentsection}
+		\item[] \textbf{#1} | \textsl{#2} \hfill \textsl{#3}\\
+		#4
+	\end{indentsection}
+\nopagebreak[4]}
+
+% \vspace variaties
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
+
+% \spacedhrule a horizontal line with some vertical space before and after it
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
