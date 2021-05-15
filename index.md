@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-<img src="assets/images/profile.jpg" alt="ProfilePic" style="width: 305px; float:
+<img src="assets/images/profile.jpg" alt="ProfilePic" style="width: 240px; float:
 left; padding-right: 1rem; padding-top: 0.4rem;"/> 
 
 Hi there! I am Vimarsh, a final year CS undergrad at <a href="https://www.iitm.ac.in" target="_blank">IIT Madras</a>, India.  
