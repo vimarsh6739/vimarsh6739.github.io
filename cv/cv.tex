@@ -1,5 +1,5 @@
 \documentclass[10pt]{article}
-\usepackage[a4paper, left=0.40in, right=0.40in, top=0.25in, bottom=0.15in]{geometry}
+\usepackage[a4paper, left=0.40in, right=0.40in, top=0.10in, bottom=0.1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \hyphenation{Some-long-word}
@@ -9,8 +9,9 @@
 \begin{document}
 	
 \begin{center}
-	\textbf{\LARGE Vimarsh Sathia}\\[0.5ex]
-	\textscale{1.05}{$1202$ Chelsea, Hiranandani Estate, Thane $400607$\\
+	\textbf{\LARGE Vimarsh Sathia}\\
+	\textscale{1.05}{
+		$1202$ Chelsea, Hiranandani Estate, Thane $400607$ \\
 		\Letter\hspace{0.1ex} \href{mailto:vimarsh.sathia@gmail.com}{vimarsh.sathia@gmail.com}
 		\hfill
 		\Mobilefone\hspace{0.1ex} +91 98194-33877}
@@ -24,15 +25,15 @@
 	{Chennai, India}
 	{Bachelors of Technology in Computer Science}
 	{\period{July}{2017}{June}{2021(expected)}}
-	{GPA : $9.1$/$10$ (after $6$ semesters)}
+	{GPA : $9.08$/$10$ (after $7$ semesters)}
 
 \spacedhrule{0.8ex}{0.0ex}
 \roottitle{ACHIEVEMENTS}
 
 \begin{circlist}
 	\item Awarded the first place at JARVIS - the Data Analytics hackathon event at \href{https://en.wikipedia.org/wiki/Shaastra}{Shaastra 2020}, an All India tech fest organized by IIT Madras
-	\item Awarded a branch change from Engineering Physics to Computer Science on the basis of GPA at the end of Semester $1$
-	\item Secured an All India Rank of $1806$ among half a million candidates in \href{https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced}{JEE} $2017$.
+% 	\item Awarded a branch change from Engineering Physics to Computer Science on the basis of GPA at the end of Semester $1$
+% 	\item Secured an All India Rank of $1806$ among half a million candidates in \href{https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced}{JEE} $2017$.
 \end{circlist}
 
 \spacedhrule{0.8ex}{0.0ex}
@@ -79,7 +80,50 @@
 
 \spacedhrule{0.8ex}{0.0ex}
 \roottitle{PROJECTS}
+
+	\headedsectionthree
+	{Implementing GPU-Parallel Genetic Programming in cuML}
+	{\period{Feb}{2021}{Ongoing}}
+	{Bachelor's Thesis (under Prof. \href{https://www.cse.iitm.ac.in/~rupesh/}{Rupesh Nasre} in collaboration with \href{https://www.nvidia.com/en-in/}{Nvidia})}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item The aim is to parallelize symbolic regression and transformation using \textit{CUDA} in the \href{https://github.com/rapidsai/cuml}{cuML} machine learning library.
+			\item Uses a device side stack-based model for expression tree evaluation and tournament selections. 
+		\end{circlist}
+	}
+	\headedsectionthree
+	{Alias and MHP Analysis for Java subsets}
+	{\period{Jan}{2021}{May}{2021}}
+	{CS6235: Analysis of Parallel Programs}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Implemented a context insensitive flow insensitive may alias analysis for \href{http://www.cse.iitm.ac.in/~krishna/cs6235/subsets.html}{qTACoJava}, a subset of the Java language. 
+			\item Reimplemented the flow sensitive MHP(May Happen in Parallel) analysis described in \href{https://dl.acm.org/doi/10.1145/318774.319252}{this paper} for \href{http://www.cse.iitm.ac.in/~krishna/cs6235/subsets.html}{qParJava}, a intraprocedural multi-threaded subset of the Java language.
+		\end{circlist}
+	}
 	
+	\headedsectionthree
+	{Image Classification using Self-Calibrated Convolutions}
+	{\period{Jul}{2020}{Nov}{2020}}
+	{CS6910: Deep Learning}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Course project on analyzing the effect of self-calibrated covolutions(introduced \href{http://mftp.mmcheng.net/Papers/20cvprSCNet.pdf}{here}) on standard image classification datasets.
+			\item Compared performance of pretrained \textit{SCNet} and \textit{ResNet} models by adapting them to the \href{https://github.com/fastai/imagenette}{Imagenette} and \href{https://github.com/fastai/imagenette}{Imagewoof} datasets using transfer learning. Also visualized resulting attention maps using \textit{Grad-CAM}.
+		\end{circlist}
+	}
+
+	\headedsectionthree
+	{Permissioned Distributed File Sharing System}
+	{\period{July}{2020}{Nov}{2020}}
+	{CS6666: Blockchain and Distributed Ledgers}
+	{\vspace{-2.4ex}
+		\begin{circlist}
+			\item Built a cloud-based distributed file-sharing decentralized app which uses a blockchain ledger to manage data access and record snapshots.
+			\item Used a VM cluster running \href{https://ipfs.io/}{IPFS} daemons for data storage, the \href{https://ropsten.etherscan.io/}{Ropsten Testnet} for transactions, and a React frontend hosted \href{https://rough-truth-8164.on.fleek.co/}{here}.
+		\end{circlist}
+	}
+
 	\headedsectionthree
 	{Conway's Game of Life}
 	{\period{Jan}{2020}{May}{2020}}
@@ -87,41 +131,41 @@
 	{\vspace{-2.4ex}
 		\begin{circlist}
 			\item Course project on a parallel implementation and visualization of cellular automation using GPUs.
-			\item Implemented parallel computation using the Nvidia CUDA library, and rendered the results using texture mapping in OpenGL. 
+			\item Used \textit{CUDA} and \textit{OpenGL} in tandem for parallel texture based rendering and next generation computation. 
 		\end{circlist}
 	}
 
-	\headedsectionthree
-	{Hidden Markov Models for Spoken Digit and Handwritten Character Classification}
-	{\period{Jul}{2019}{Nov}{2019}}
-	{CS5691: Pattern Recognition and Machine Learning}
-	{\vspace{-2.4ex}
-		\begin{circlist}
-			\item Modelled spoken digits and handwritten Telugu characters using left to right HMM sequences trained using the Baum-Welch algorithm for classification
-			\item Achieved multi-digit and multi-character classification by concatenating individually trained HMM sequences.
-		\end{circlist}
-	}
+	% \headedsectionthree
+	% {Hidden Markov Models for Spoken Digit and Handwritten Character Classification}
+	% {\period{Jul}{2019}{Nov}{2019}}
+	% {CS5691: Pattern Recognition and Machine Learning}
+	% {\vspace{-2.4ex}
+	% 	\begin{circlist}
+	% 		\item Modelled spoken digits and handwritten Telugu characters using left to right HMM sequences trained using the Baum-Welch algorithm for classification
+	% 		\item Achieved multi-digit and multi-character classification by concatenating individually trained HMM sequences.
+	% 	\end{circlist}
+	% }
 	
-	\headedsectionthree
-	{MiniJava Compiler}
-	{\period{Jul}{2019}{Nov}{2019}}
-	{CS3300: Compilers}
-	{\vspace{-2.4ex}
-		\begin{circlist}
-			\item Course assignment on writing a $6$ pass compiler for minijava (a subset of the java language) and converting the code to MIPS assembly.
-			\item Implemented using \href{https://javacc.github.io/javacc/}{JavaCC} as the parser generator, with \href{http://compilers.cs.ucla.edu/jtb/}{JTB} as a syntax tree builder for all intermediate passes.
-		\end{circlist}
-	}
+	% \headedsectionthree
+	% {MiniJava Compiler}
+	% {\period{Jul}{2019}{Nov}{2019}}
+	% {CS3300: Compilers}
+	% {\vspace{-2.4ex}
+	% 	\begin{circlist}
+	% 		\item Course assignment on writing a $6$ pass compiler for minijava (a subset of the java language) and converting the code to MIPS assembly.
+	% 		\item Implemented using \href{https://javacc.github.io/javacc/}{JavaCC} as the parser generator, with \href{http://compilers.cs.ucla.edu/jtb/}{JTB} as a syntax tree builder for all intermediate passes.
+	% 	\end{circlist}
+	% }
 
-	\headedsectionthree
-	{Prolog interpreter in OCaml}
-	{\period{Jul}{2019}{Nov}{2019}}
-	{CS3100: Paradigms of Programming}
-	{\vspace{-2.4ex}
-		\begin{circlist}
-			\item Final course assignment to implement a Prolog interpreter in OCaml with support for backtracking(recover from bad choices) and choice points(produce multiple results).
-		\end{circlist}
-	}
+	% \headedsectionthree
+	% {Prolog interpreter in OCaml}
+	% {\period{Jul}{2019}{Nov}{2019}}
+	% {CS3100: Paradigms of Programming}
+	% {\vspace{-2.4ex}
+	% 	\begin{circlist}
+	% 		\item Final course assignment to implement a Prolog interpreter in OCaml with support for backtracking(recover from bad choices) and choice points(produce multiple results).
+	% 	\end{circlist}
+	% }
 
 	% \headedsectionthree
 	% {HTTP Proxy Server}
@@ -137,10 +181,9 @@
 \roottitle{RELEVANT COURSEWORK \& SKILLS}
 
 	\begin{indentsection}
-		\skill{Machine Learning}{Pattern Recognition and Machine Learning, Numerical Optimization, Applied Statistics, Deep Learning}
-		\skill{Systems}{Operating Systems, Computer Networks, GPU Programming, Blockchain and Distributed Ledger Tech}
-		\skill{PL}{Compilers, Paradigms of Programming(Functional Programming)}
-		\skill{Algorithms}{Design and Analysis of Algorithms, Topics in Algorithm Design, Pseudorandomness}
+		\skill{Machine Learning}{Linear Algebra, Pattern Recognition, Deep Learning, Numerical Optimization, Numerical Methods, Applied Statistics}
+		\skill{Program Analysis}{Parallel Program Analysis, Compilers, GPU Programming, Functional Programming}
+		\skill{Systems}{Operating Systems, Computer Networks, Blockchain and Distributed Ledgers}
 	\end{indentsection}
 
 \spacedhrule{0.8ex}{0.0ex}
