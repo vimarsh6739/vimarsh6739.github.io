@@ -2,22 +2,22 @@
 layout: default
 title: Home
 ---
-<img src="assets/images/profile.jpg" alt="ProfilePic" style="width: 240px; float:
+<img src="assets/images/profile.jpg" alt="ProfilePic" style="width: 200px; float:
 left; padding-right: 1rem; padding-top: 0.4rem;"/> 
 
-Hi there! I am Vimarsh, a final year CS undergrad at <a href="https://www.iitm.ac.in" target="_blank">IIT Madras</a>, India.  
+Hi there! I'm Vimarsh, a 2nd year PhD student at the University of Illinois Urbana-Champaign. I work with Prof. Charith Mendis at the ADAPT group.
 
-I have a keen interest in GPU Programming, Program Analysis, Blockchain Networks and Math(mainly Statistics and Numerical Optimization). That being said, I'm not a fan of *debugging* projects in either of the aforementioned topics. 
+I'm currently working on GPU optimizations for sparse matrix/graph workloads, and abstractions for applying them in a generalized manner. 
 
-In my free time, you'll see me working on side projects, messing around with my Ubuntu setup, wading through hackernews/reddit posts or watching anime. Sometimes, you might also catch me having long winded discussions about Java or CUDA semantics with my friends. I also like running, and play [squash](https://en.wikipedia.org/wiki/Squash_(sport)) and badminton (although this is on the backseat now due to COVID-19). 
+Outside of academics, I like running and playing [squash](https://en.wikipedia.org/wiki/Squash_(sport)). I have also starting re-learning the piano, so there's that. 
 
-Read more at 
-* [CV](cv/cv.pdf)
+
+Read more at:
+* [CV](cv/resume.pdf)
 * [Blog](/blog)
 
 ## Contact Me
 
-* Email : [vimarsh.sathia@gmail.com](mailto:vimarsh.sathia@gmail.com) (main), [vimarsh@smail.iitm.ac.in](mailto:vimarsh@smail.iitm.ac.in), [cs17b046@cse.iitm.ac.in](mailto:cs17b046@cse.iitm.ac.in)
+* Email : [vimarsh.sathia@gmail.com](mailto:vimarsh.sathia@gmail.com) (main), [vsathia2@illinos.edu](mailto:vsathia2@illinois.edu)
 * Github : [vimarsh6739](https://github.com/vimarsh6739)
-* LinkedIn : [Vimarsh Sathia](https://www.linkedin.com/in/vimarsh-sathia-83a85810a)
-* Twitter : [@vimarsh_6739](https://twitter.com/vimarsh_6739)
+* LinkedIn : [Vimarsh Sathia](https://www.linkedin.com/in/vsathia)
