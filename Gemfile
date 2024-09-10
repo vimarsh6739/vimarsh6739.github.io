@@ -27,3 +27,7 @@ gem "github-pages", group: :jekyll_plugins
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
 end
+
+gem "ostruct", "~> 0.6.0"
+
+gem "faraday-retry", "~> 2.2"
