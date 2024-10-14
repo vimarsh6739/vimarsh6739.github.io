@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Vimarsh Sathia"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Fighting dragons"
+  bio              : "π(P) < π(Q)"
   location         : "Urbana, IL"
   email            : #"vimarsh.sathia@gmail.com"
   links:
@@ -232,7 +232,8 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
+permalink: /blog/:year/:month/:day/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
