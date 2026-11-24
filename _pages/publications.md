@@ -17,7 +17,7 @@ See also [Google Scholar](https://scholar.google.com/citations?user=Aryo7Y4AAAAJ
 
 <!-- ## Under Review -->
 
-{% for p in site.data.publications.under_review %}{% include publication.html pub=p %}{% endfor %}
+<!-- {% for p in site.data.publications.under_review %}{% include publication.html pub=p %}{% endfor %} -->
 
 ## Preprints
 
