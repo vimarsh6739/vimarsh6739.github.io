@@ -7,3 +7,21 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Publications list (see _includes/publication.html) */
+.pub { margin: 0 0 1.4em; line-height: 1.45; }
+.pub__title { font-weight: bold; }
+.pub__authors, .pub__venue { font-size: 0.9em; }
+.pub__award { color: #8b1a1a; font-weight: bold; font-style: normal; margin-left: 0.3em; }
+.pub__links { margin-top: 0.3em; font-size: 0.75em; }
+.pub__btn {
+  display: inline-block; padding: 0.1em 0.6em; margin-right: 0.4em;
+  border: 1px solid $border-color; border-radius: 4px;
+  color: $link-color; text-decoration: none; cursor: pointer;
+  &:hover { background: mix(#fff, $link-color, 90%); }
+}
+.pub__bib { display: inline; }
+.pub__bib summary { list-style: none; }
+.pub__bib summary::-webkit-details-marker { display: none; }
+.pub__bib[open] summary { background: mix(#fff, $link-color, 85%); }
+.pub__bib pre { margin: 0.6em 0 0; font-size: 1em; white-space: pre; overflow-x: auto; }

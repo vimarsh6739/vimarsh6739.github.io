@@ -1,0 +1,19 @@
+{% assign p = include.pub %}
+<div class="pub">
+  <div class="pub__title">{{ p.title }}</div>
+  <div class="pub__authors">{{ p.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+  {% if p.venue %}<div class="pub__venue"><em>{{ p.venue }}</em>{% if p.award %} <span class="pub__award">🏆 {{ p.award }}</span>{% endif %}</div>{% endif %}
+  {% if p.url or p.doi or p.arxiv or p.bibtex %}
+  <div class="pub__links">
+    {% if p.url %}<a class="pub__btn" href="{{ p.url }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
+    {% if p.doi %}<a class="pub__btn" href="https://doi.org/{{ p.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>{% endif %}
+    {% if p.arxiv %}<a class="pub__btn" href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>{% endif %}
+    {% if p.bibtex %}
+    <details class="pub__bib">
+      <summary class="pub__btn">BibTeX</summary>
+      <pre><code>{{ p.bibtex | strip | escape }}</code></pre>
+    </details>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

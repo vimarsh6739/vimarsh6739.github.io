@@ -1,0 +1,116 @@
+# Publications. Rendered by _includes/publication.html on /publications/.
+# Fields: title, authors, venue, award, url, doi, arxiv, bibtex (all optional except title).
+# Wrap your own name in ** ** in `authors` to bold it.
+
+conference:
+  - title: "Floating up the Peak: Automatic Numerical Rewriting Enables Fast and Tensorized Accelerator Code"
+    authors: "Siyuan Brant Qian, **Vimarsh Sathia**, Jan Hückelheim, Jens Domke, Paul Hovland, William S. Moses"
+    venue: "CGO 2027 (to appear)"
+    bibtex: |
+      @inproceedings{qian2027floating,
+        title     = {Floating up the Peak: Automatic Numerical Rewriting Enables Fast and Tensorized Accelerator Code},
+        author    = {Qian, Siyuan Brant and Sathia, Vimarsh and H{\"u}ckelheim, Jan and Domke, Jens and Hovland, Paul and Moses, William S.},
+        booktitle = {2027 IEEE/ACM International Symposium on Code Generation and Optimization (CGO)},
+        address   = {Salt Lake City, UT, USA},
+        year      = {2027},
+        note      = {To appear}
+      }
+
+  - title: "Thinking Fast and Correct: Automated Rewriting of Numerical Code through Compiler Augmentation"
+    authors: "Siyuan Brant Qian, **Vimarsh Sathia**, Ivan R. Ivanov, Jan Hückelheim, Paul Hovland, William S. Moses"
+    venue: "CGO 2026, Sydney, Australia"
+    award: "Distinguished Paper Award"
+    doi: "10.1109/CGO68049.2026.11395228"
+    bibtex: |
+      @inproceedings{qian2026thinking,
+        title     = {Thinking Fast and Correct: Automated Rewriting of Numerical Code through Compiler Augmentation},
+        author    = {Qian, Siyuan Brant and Sathia, Vimarsh and Ivanov, Ivan R. and H{\"u}ckelheim, Jan and Hovland, Paul and Moses, William S.},
+        booktitle = {2026 IEEE/ACM International Symposium on Code Generation and Optimization (CGO)},
+        publisher = {IEEE},
+        pages     = {548--562},
+        year      = {2026},
+        doi       = {10.1109/CGO68049.2026.11395228}
+      }
+
+  - title: "GRANII: Selection and Ordering of Primitives in GRAph Neural Networks using Input Inspection"
+    authors: "Damitha Lenadora, **Vimarsh Sathia**, Gerasimos Gerogiannis, Serif Yesil, Josep Torrellas, Charith Mendis"
+    venue: "CGO 2026, Sydney, Australia"
+    doi: "10.1109/CGO68049.2026.11395219"
+    bibtex: |
+      @inproceedings{lenadora2026granii,
+        title     = {{GRANII}: Selection and Ordering of Primitives in {GRAph} Neural Networks using Input Inspection},
+        author    = {Lenadora, Damitha and Sathia, Vimarsh and Gerogiannis, Gerasimos and Yesil, Serif and Torrellas, Josep and Mendis, Charith},
+        booktitle = {2026 IEEE/ACM International Symposium on Code Generation and Optimization (CGO)},
+        publisher = {IEEE},
+        pages     = {14--27},
+        year      = {2026},
+        doi       = {10.1109/CGO68049.2026.11395219}
+      }
+
+workshop:
+  - title: "SkyMatch.jl: Fast, Differentiable Modeling for Millimeter-Sky Inference"
+    authors: "**Vimarsh Sathia**, Kedar Phadke, Siyuan Brant Qian, Joaquin Vieira, William S. Moses"
+    venue: "Scale to See Workshop at SC'26, Chicago, IL, 2026"
+    doi: "10.1109/SCW72768.2026.00322"
+    bibtex: |
+      @inproceedings{sathia2026skymatch,
+        title     = {{SkyMatch.jl}: Fast, Differentiable Modeling for Millimeter-Sky Inference},
+        author    = {Sathia, Vimarsh and Phadke, Kedar A. and Qian, Siyuan Brant and Vieira, Joaquin and Moses, William S.},
+        booktitle = {SC26-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+        publisher = {IEEE Computer Society},
+        address   = {Los Alamitos, CA, USA},
+        pages     = {2848--2854},
+        year      = {2026},
+        month     = nov,
+        doi       = {10.1109/SCW72768.2026.00322}
+      }
+
+  - title: "Data Race Detection through Vibe Translation"
+    authors: "Jan Hückelheim, **Vimarsh Sathia**, Siyuan Brant Qian"
+    venue: "Correctness Workshop at SC'25, St. Louis, MO, 2025"
+    award: "Best Paper Presentation Award"
+    doi: "10.1145/3731599.3767363"
+    bibtex: |
+      @inproceedings{hueckelheim2025datarace,
+        title     = {Data Race Detection through Vibe Translation},
+        author    = {H{\"u}ckelheim, Jan and Sathia, Vimarsh and Qian, Siyuan Brant},
+        booktitle = {Proceedings of the SC '25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+        series    = {SC Workshops '25},
+        publisher = {ACM},
+        pages     = {198--206},
+        year      = {2025},
+        doi       = {10.1145/3731599.3767363}
+      }
+
+  - title: "Compiler Optimizations for Higher-Order Automatic Differentiation"
+    authors: "**Vimarsh Sathia**, Siyuan Brant Qian, Jan Hückelheim, Paul Hovland, William S. Moses"
+    venue: "DiffProg Workshop at PPoPP'25, Las Vegas, NV, 2025"
+    bibtex: |
+      @misc{sathia2025higherorder,
+        title        = {Compiler Optimizations for Higher-Order Automatic Differentiation},
+        author       = {Sathia, Vimarsh and Qian, Siyuan Brant and H{\"u}ckelheim, Jan and Hovland, Paul and Moses, William S.},
+        howpublished = {2nd Workshop on Differentiable Parallel Programming (DiffProg), co-located with PPoPP'25, Las Vegas, NV, USA},
+        note         = {Non-archival workshop},
+        year         = {2025}
+      }
+
+# under_review:
+#   - title: "Reactant: Abstraction Raising Automates Kernel Portability over Specialized Accelerators"
+#     authors: "William S. Moses, Paul Berg, **Vimarsh Sathia**, Avik Pal, Ivan R. Ivanov, Jules Merckx, Arpit Jaiswal, Lorenzo Chelini, Albert Cohen, Oleksandr Zinenko"
+#
+#   - title: "Impulse: Momentously Fast, General, and Portable Probabilistic Programming via Compiler Augmentation"
+#     authors: "Siyuan Brant Qian, **Vimarsh Sathia**, Jesse Michel, William S. Moses"
+
+preprints:
+  - title: "Accelerating Genetic Programming using GPUs"
+    authors: "**Vimarsh Sathia**, Venkataramana Ganesh, Shankara Rao Thejaswi Nanditale"
+    venue: "arXiv, 2021"
+    arxiv: "2110.11226"
+    bibtex: |
+      @misc{sathia2021accelerating,
+        title         = {Accelerating Genetic Programming using {GPUs}},
+        author        = {Sathia, Vimarsh and Ganesh, Venkataramana and Nanditale, Shankara Rao Thejaswi},
+        year          = {2021},
+        eprint        = {2110.11226},
+        archivePrefix = {arXiv}
+      }

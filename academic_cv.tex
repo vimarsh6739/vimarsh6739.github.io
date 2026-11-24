@@ -1,0 +1,260 @@
+%-------------------------------------------------------------------------------
+% Academic CV -- Vimarsh Sathia
+% Build: latexmk -pdf academic_cv.tex
+%-------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,hmargin=0.85in,vmargin=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{marvosym}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{linkblue}{RGB}{20,60,160}
+\hypersetup{
+  colorlinks=true, linkcolor=linkblue, urlcolor=linkblue,
+  pdftitle={Vimarsh Sathia -- Curriculum Vitae},
+  pdfauthor={Vimarsh Sathia},
+}
+\urlstyle{same}
+\raggedright
+\raggedbottom
+\setlength{\parindent}{0pt}
+
+% Header / footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\small\textcolor{gray}{Vimarsh Sathia -- CV (updated November 2026)}}
+\rfoot{\small\textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
+
+% Section style: small caps with a rule
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\vspace{-6pt}\rule{\textwidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% Me, in author lists
+\newcommand{\me}{\textbf{Vimarsh Sathia}}
+
+% Heading line: bold left, right-aligned date
+\newcommand{\entry}[2]{\needspace{2.5\baselineskip}\textbf{#1}\hfill #2\\}
+
+% Tagged list: a right-aligned label column (dates, venue tags) + body
+\newenvironment{tagged}[1]{%
+  \begin{description}[leftmargin=#1, labelwidth=\dimexpr#1-0.8em\relax,
+    labelsep=0.8em, align=right, font=\normalfont, itemsep=1pt, topsep=1pt]}
+  {\end{description}}
+
+% Compact bullet list
+\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, topsep=1pt, parsep=0pt}
+
+% Publication entry: {title}{authors}{venue}{extras}
+\newcommand{\pub}[4]{\begin{minipage}[t]{\linewidth}\raggedright\textbf{#1}\\ #2\\ \textit{#3}#4\end{minipage}}
+\newcommand{\award}[1]{\\ \textcolor{red!60!black}{\textbf{#1}}}
+
+%===============================================================================
+\begin{document}
+
+\begin{center}
+  {\Huge\scshape Vimarsh Sathia}\\[4pt]
+  Ph.D. Student in Computer Science, University of Illinois Urbana-Champaign\\[2pt]
+  \Letter~\href{mailto:vimarsh.sathia@gmail.com}{vimarsh.sathia@gmail.com}
+  \enspace$\cdot$\enspace \href{https://vimarsh6739.github.io}{vimarsh6739.github.io}
+  \enspace$\cdot$\enspace \href{https://github.com/vimarsh6739}{GitHub}
+  \enspace$\cdot$\enspace \href{https://scholar.google.com/citations?user=Aryo7Y4AAAAJ}{Google Scholar}
+  \enspace$\cdot$\enspace \href{https://www.linkedin.com/in/vimarsh-sathia-83a85810a/}{LinkedIn}
+\end{center}
+
+%-------------------------------------------------------------------------------
+\section{Research Interests}
+Compilers and programming languages for scientific computing and machine learning;
+automatic differentiation; MLIR-based tensor compilers; numerical program optimization;
+performance engineering for CPUs, GPUs, and accelerators.
+
+%-------------------------------------------------------------------------------
+\section{Education}
+\entry{University of Illinois Urbana-Champaign}{Aug 2022 -- Present}
+\textit{Ph.D. in Computer Science}\\
+Advisor: \href{https://wsmoses.com/academic/}{William S. Moses}
+
+\vspace{6pt}
+\entry{Indian Institute of Technology Madras}{2017 -- 2021}
+\textit{B.Tech. in Computer Science and Engineering}
+
+%-------------------------------------------------------------------------------
+\section{Honors and Awards}
+\begin{tagged}{3.2em}
+  \item[2026] Distinguished Paper Award, CGO 2026\\
+    for ``Thinking Fast and Correct: Automated Rewriting of Numerical Code through Compiler Augmentation''
+  \item[2021] C.~S.~Krishnamoorthy Endowment Prize, IIT Madras\\
+    for the best B.Tech./M.Tech.\ project in Genetic Algorithms and Evolutionary Computation
+\end{tagged}
+
+%-------------------------------------------------------------------------------
+\section{Research Appointments}
+\entry{University of Illinois Urbana-Champaign}{Aug 2022 -- Present}
+\textit{Graduate Research Assistant}, Urbana, IL
+% \begin{itemize}
+%   \item AD-aware compiler optimizations in EnzymeMLIR: activity-based simplification, differentiation batching, and region-based code motion across the differentiation boundary.
+%   \item Raising GPU and scientific programs from LLVM IR to StableHLO, enabling tensor-level rewrites, differentiation, and accelerator execution.
+%   \item Automated rewriting of numerical code through compiler augmentation (Poseidon).
+%   \item Fast, differentiable astrophysics simulation (SkyMatch.jl) via the Reactant.jl compiler.
+% \end{itemize}
+
+\vspace{4pt}
+\entry{Modal Labs}{Jun 2026 -- Present}
+\textit{Member of Technical Staff} (full-time Jun -- Aug 2026; part-time since Aug 2026)
+
+\vspace{4pt}
+\entry{AMD Research and Advanced Development}{May 2025 -- Aug 2025}
+\textit{Research Associate}, Austin, TX
+\begin{itemize}
+  \item Verified GPU data-movement instructions and transformations using SMT.
+  \item Built a translation-validation pipeline in MLIR using the \texttt{smt} dialect.
+\end{itemize}
+
+\vspace{4pt}
+\entry{Qualcomm, Compiler Labs}{May 2024 -- Aug 2024}
+\textit{Research Intern}, New York, NY
+\begin{itemize}
+  \item Prototyped a Hexagon backend for \href{https://iree.dev}{IREE} with the MLIR team.
+  \item Designed and implemented compiler passes for automatic tiling of HVX code.
+\end{itemize}
+
+\vspace{4pt}
+\entry{Microsoft, Azure}{Jun 2021 -- Jul 2022}
+\textit{Software Engineer}, Bangalore, India
+
+%-------------------------------------------------------------------------------
+\section{Research Affiliations}
+\entry{NSF--Simons AI Institute for the Sky (SkAI)}{Sep 2024 -- Present}
+\textit{Graduate Researcher}, project ``Automating Bayesian Inference of Millimeter Source Association''\\
+PIs: William S. Moses, Joaquin Vieira
+
+\vspace{4pt}
+\entry{MIT Center for the Exascale Simulation of Coupled High Enthalpy Fluid--Solid Interactions (CHEFSI)}{Sep 2025 -- Present}
+\textit{Graduate Student Researcher}; DOE NNSA PSAAP IV Predictive Science Center
+
+%-------------------------------------------------------------------------------
+\section{Publications}
+\subsection*{Conference Papers}
+\begin{tagged}{7.6em}
+  \item[{[CGO'27]}] \pub{Floating up the Peak: Automatic Numerical Rewriting Enables Fast and Tensorized Accelerator Code}
+    {Siyuan Brant Qian, \me, Jan H\"uckelheim, Jens Domke, Paul Hovland, William S. Moses}
+    {25th ACM/IEEE International Symposium on Code Generation and Optimization (CGO), Salt Lake City, UT, 2027. To appear.}{}
+
+  \item[{[CGO'26a]}] \pub{Thinking Fast and Correct: Automated Rewriting of Numerical Code through Compiler Augmentation}
+    {Siyuan Brant Qian, \me, Ivan R. Ivanov, Jan H\"uckelheim, Paul Hovland, William S. Moses}
+    {24th ACM/IEEE International Symposium on Code Generation and Optimization (CGO), Sydney, Australia, 2026.}
+    {\award{Distinguished Paper Award}}
+
+  \item[{[CGO'26b]}] \pub{GRANII: Selection and Ordering of Primitives in GRAph Neural Networks using Input Inspection}
+    {Damitha Lenadora, \me, Gerasimos Gerogiannis, Serif Yesil, Josep Torrellas, Charith Mendis}
+    {24th ACM/IEEE International Symposium on Code Generation and Optimization (CGO), Sydney, Australia, 2026, pp.~14--27.
+     \href{https://doi.org/10.1109/CGO68049.2026.11395219}{doi:10.1109/CGO68049.2026.11395219}}{}
+\end{tagged}
+
+\subsection*{Workshop Papers}
+\begin{tagged}{7.6em}
+  \item[{[SC-W'26]}] \pub{SkyMatch.jl: Fast, Differentiable Modeling for Millimeter-Sky Inference}
+    {\me, Kedar Phadke, Siyuan Brant Qian, Joaquin Vieira, William S. Moses}
+    {Scale to See: Scalable AI for Scientific Imaging and Spatiotemporal Data, Workshop at SC'26, Chicago, IL, 2026.}{}
+
+  \item[{[SC-W'25]}] \pub{Data Race Detection through Vibe Translation}
+    {Jan H\"uckelheim, \me, Siyuan Brant Qian}
+    {9th International Workshop on Software Correctness for HPC Applications (Correctness), Workshop at SC'25, St.~Louis, MO, 2025.
+     \href{https://doi.org/10.1145/3731599.3767363}{doi:10.1145/3731599.3767363}}
+    {\award{Best Paper Presentation Award}}
+
+  \item[{[DiffProg'25]}] \pub{Compiler Optimizations for Higher-Order Automatic Differentiation}
+    {\me, Siyuan Brant Qian, Jan H\"uckelheim, Paul Hovland, William S. Moses}
+    {2nd Workshop on Differentiable Parallel Programming (DiffProg), co-located with PPoPP'25, Las Vegas, NV, 2025.}{}
+\end{tagged}
+
+% \subsection*{Student Research Competition}
+% \begin{tagged}{7.6em}
+%   \item[{[PLDI-SRC'26]}] \pub{Impulse: Momentously Fast, General, and Portable Probabilistic Programming via Compiler Augmentation}
+%     {Siyuan Brant Qian, \me, Jesse Michel, William S. Moses}
+%     {ACM SIGPLAN PLDI Student Research Competition, Boulder, CO, 2026.}
+%     {\award{Gold Medal, Graduate Category}}
+% \end{tagged}
+
+\subsection*{Under Review}
+\begin{tagged}{7.6em}
+  \item[{[Submitted]}] \pub{Reactant: Abstraction Raising Automates Kernel Portability over Specialized Accelerators}
+    {William S. Moses, Paul Berg, \me, Avik Pal, Ivan R. Ivanov, Jules Merckx, Arpit Jaiswal, Lorenzo Chelini, Albert Cohen, Oleksandr Zinenko}
+    {Under review, 2026.}{}
+
+  \item[{[Submitted]}] \pub{Impulse: Momentously Fast, General, and Portable Probabilistic Programming via Compiler Augmentation}
+    {Siyuan Brant Qian, \me, Jesse Michel, William S. Moses}
+    {Under review, 2026.}{}
+\end{tagged}
+
+\subsection*{Preprints}
+\begin{tagged}{7.6em}
+  \item[{[arXiv'21]}] \pub{Accelerating Genetic Programming using GPUs}
+    {\me, Venkataramana Ganesh, Shankara Rao Thejaswi Nanditale}
+    {\href{https://arxiv.org/abs/2110.11226}{arXiv:2110.11226}, 2021.}{}
+\end{tagged}
+
+%-------------------------------------------------------------------------------
+\section{Talks}
+\textbf{SkyMatch.jl: Fast, Differentiable Modeling for Millimeter-Sky Inference}
+\begin{itemize}
+  \item Scale to See Workshop at SC'26, 11/20/2026, Chicago, IL
+\end{itemize}
+
+\textbf{Optimizing Across the Differentiation Boundary with EnzymeMLIR}
+\begin{itemize}
+  \item 2026 US LLVM Developers' Meeting, 10/2026, Santa Clara, CA
+\end{itemize}
+
+\textbf{Raising, Differentiating, and Optimizing Tensor Programs in EnzymeMLIR}
+\begin{itemize}
+  \item Modal Labs, 07/08/2026, New York, NY
+  \item Seminar talk, University of Illinois Urbana-Champaign, 05/04/2026
+\end{itemize}
+
+\textbf{AD-aware Compiler Optimizations in Enzyme MLIR}
+\begin{itemize}
+  \item MFEM Community Workshop 2025, 09/10/2025
+\end{itemize}
+
+\textbf{Compiler Optimizations for Higher-Order Automatic Differentiation}
+\begin{itemize}
+  \item DiffProg Workshop at PPoPP'25, 03/01/2025, Las Vegas, NV
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Teaching}
+\subsection*{Teaching Assistant, University of Illinois Urbana-Champaign}
+\begin{tagged}{7.6em}
+  \item[Fall 2026]   CS 598 APE Advanced Performance Engineering (William S. Moses)
+  \item[Spring 2026] CS 421 Programming Languages (Mattox Beckman)
+  \item[Spring 2025] CS 598 APE Advanced Performance Engineering (William S. Moses)
+  \item[Fall 2024]   CS 426 Compiler Construction (Charith Mendis)
+\end{tagged}
+
+\subsection*{Lectures}
+\begin{tagged}{7.6em}
+  \item[Fall 2026]   CS 598 APE Advanced Performance Engineering, UIUC (1 lecture)
+\end{tagged}
+
+%-------------------------------------------------------------------------------
+\section{Mentoring}
+\begin{itemize}[itemsep=1pt]
+  \item \textbf{Hashmita Nittala} (UIUC undergraduate): Bayesian forward modeling in \href{https://github.com/PRONTOLab/SkyMatch.jl}{SkyMatch.jl}.
+  \item \textbf{Yuansui Xu} (UIUC): Portable performance for GPU code across NVIDIA and AMD accelerators.
+  \item \textbf{Aditya Prerepa} and \textbf{Ayush Raman} (UIUC undergraduates): Performance engineering with LLMs (\href{https://github.com/adiprerepa/pesquared}{pesquared}).
+  \item \textbf{Siddarth Aananth} (UIUC): Pruning and semi-supervised learning.
+\end{itemize}
+
+\end{document}

@@ -1,15 +1,12 @@
 # main links
 main:
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Blog"
     url: /blog
   - title: "Bio"
     url: /bio
-  # - title: "Publications"
-  #   url: /publications
-  # - title: "Talks"
-  #   url: /talks
-  
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Publications"
+    url: /publications/
+  - title: "Talks"
+    url: /talks/
+  - title: "CV"
+    url: /assets/files/academic_cv.pdf
